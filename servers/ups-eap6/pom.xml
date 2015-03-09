@@ -24,9 +24,9 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>unifiedpush-server-as7</artifactId>
+    <artifactId>unifiedpush-server-eap6</artifactId>
     <packaging>war</packaging>
-    <name>UnifiedPush Server for JBossAS (WAR)</name>
+    <name>UnifiedPush Server for JBoss EAP (WAR)</name>
 
     <dependencies>
 
