@@ -129,6 +129,7 @@ public class ClientInstallationServiceImpl implements ClientInstallationService 
     }
 
     @Override
+    @Asynchronous
     public void removeInstallations(
             List<Installation> installations) {
 
@@ -138,12 +139,14 @@ public class ClientInstallationServiceImpl implements ClientInstallationService 
         }
     }
 
+    @Asynchronous
     public void updateInstallation(
             Installation installation) {
         installationDao.update(installation);
     }
 
     @Override
+    @Asynchronous
     public void updateInstallation(Installation installationToUpdate, Installation postedInstallation) {
         // copy the "updateable" values:
         installationToUpdate.setCategories(postedInstallation.getCategories());
@@ -167,6 +170,7 @@ public class ClientInstallationServiceImpl implements ClientInstallationService 
     }
 
     @Override
+    @Asynchronous
     public void removeInstallation(Installation installation) {
         installationDao.delete(installation);
     }
